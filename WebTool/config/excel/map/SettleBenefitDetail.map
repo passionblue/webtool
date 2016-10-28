@@ -1,0 +1,6 @@
+상품주문번호=orderProductNum
+주문번호=orderNum
+정산기준일=dateSettled
+정산완료일=dateSettleCompleted
+혜택상세=benefitDetail
+금액=benefitPaid

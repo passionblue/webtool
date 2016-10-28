@@ -1,3 +1,7 @@
+
+This project is created to base project for work extra testing tool. But this frame can be used as starting project for MVC/DB related. 
+
+### DB package
 // Make first time working
 
 1. files in db package
@@ -16,4 +20,26 @@
 	(2) When I had fields like select id,time,type,fix from FixMsgEntry -> returned objects are in "Object". 
 	    so changed the sql to "select f from FIXMsgEntry f". then correctly mapped to the class
 		    
+### Spring related error. while start up. 
+
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [javax.persistence.EntityManagerFactory] is defined
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findDefaultEntityManagerFactory(PersistenceAnnotationBeanPostProcessor.java:575)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findEntityManagerFactory(PersistenceAnnotationBeanPostProcessor.java:531)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor$PersistenceElement.resolveEntityManager(PersistenceAnnotationBeanPostProcessor.java:697)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor$PersistenceElement.getResourceToInject(PersistenceAnnotationBeanPostProcessor.java:670)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.postProcessPropertyValues(PersistenceAnnotationBeanPostProcessor.java:354)
+	... 36 more
+	
+	
+	>> How to resolve. 
+	
+	SpringWebConfig class had "com.webtool.db" in the component scan. 
+	Autowired anontation caused the issue to fail to find the object, because it is defined in another config file. 
+	so there are two resolution. 
+	
+	(1) remove "com.webtool.db" from SpringWebConfig
+	(2) import spring config file that define EntityManagerFactory from the main spring config file so that component scan can hit the EntityManagerFactory
+	
 	

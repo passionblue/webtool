@@ -1,0 +1,7 @@
+상품주문번호=orderProductNum
+주문번호=orderNum
+정산기준일=dateSettled
+정산완료일=dateSettleCompleted
+구분=payType
+결제수수료(B)=feeSettle
+네이버 쇼핑 매출 연동 수수료(D)=feeAffiliate

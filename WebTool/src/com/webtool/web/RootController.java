@@ -20,11 +20,11 @@ public class RootController {
 
 	private final Logger logger = LoggerFactory.getLogger(RootController.class);
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String index(Model model) {
-		logger.debug("index()");
-		return "index";
-	}
+//	@RequestMapping(value = "/", method = RequestMethod.GET)
+//	public String index(Model model) {
+//		logger.debug("index()");
+//		return "index";
+//	}
 
 	@ExceptionHandler(EmptyResultDataAccessException.class)
 	public ModelAndView handleEmptyData(HttpServletRequest req, Exception ex) {

@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan({ "com.webtool.web", "com.webtool.service", "com.webtool.db", "com.webtool.exception", "com.webtool.validator" })
+@ComponentScan({ "com.webtool.web", "com.webtool.service", "com.webtool.exception", "com.webtool.validator", "com.navertool.web" })
 public class SpringWebConfig extends WebMvcConfigurerAdapter {
 
 	@Override

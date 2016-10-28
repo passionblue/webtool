@@ -10,7 +10,7 @@
 
 	<div class="container">
 
-		<h1>Error Page</h1>
+		<h1>Session Expired</h1>
 
 		<p>${exception.message}</p>
 		<!-- Exception: ${exception.message}.

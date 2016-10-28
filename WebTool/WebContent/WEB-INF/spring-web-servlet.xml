@@ -20,7 +20,9 @@
 		<aop:scoped-proxy />
 	</bean>
 
-
+<mvc:interceptors>
+    <bean class="com.navertool.web.MenuOptionsInterceptors" autowire="constructor" />
+</mvc:interceptors>
 
 <!-- 	
 		<mvc:annotation-driven>

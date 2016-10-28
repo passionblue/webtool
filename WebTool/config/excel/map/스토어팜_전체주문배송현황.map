@@ -1,0 +1,14 @@
+상품주문번호=orderProductNum
+주문번호=orderNum
+배송방법
+택배사
+송장번호=trackNum
+발송일=dateSent
+판매채널
+구매자명=
+구매자ID=
+수취인명=
+주문상태=orderStatus
+주문세부상태=orderDetailStatus
+배송완료일=dateDelivered
+발송처리일=dateSent2
